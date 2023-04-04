@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    background: linear-gradient(to bottom , #13bffd,rgba(255, 153, 28, 0.212));
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.content{
+    font-weight: bold;
+    position: relative;
+    border-radius: 50%;
+}
+
+i{
+    font-size: 45px;
+    color: #fff;
+    padding: 7px;
+    border-radius: 10px;
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+
+}
+
+@keyframes anime {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+    
+}
+.content.add-num::before{
+    opacity: 1;
+}
+
+.content::before{
+    content: attr(data-count);
+    position: absolute;
+    background: red;
+    color: #fff;
+    bottom: 45px;
+    left: 40px;
+    padding: 3px 7px;
+    border-radius: 50%;
+    animation: anime .9s ease-out infinite alternate;
+    opacity: 0;
+}
+
+.btn{
+    left: 50%;
+    top: 50%;
+    transform: translate(-70%,170%);
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background: orange;
+    color: #fff;
+    bottom: 140px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 25px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, .3);
+    transition: 400ms ease-in;
+    
+}
+
+.btn:hover{
+    background: rgb(221, 220, 220);
+    color: #000;
+    opacity: .8;
+}
